@@ -1,0 +1,26 @@
+button.nav-link{
+    width: 200px;
+    padding: 7px 0px;
+    color: #4472c4;
+    margin-right: 20px;
+}
+button.active{
+    color: #fff;
+    background: #4472c4;
+}
+.product{
+    text-align: center;
+    margin: 15px;
+    padding: 35px;
+    border: 1px solid;
+    min-height: 250px;
+    position: relative;
+}
+.product button{
+    width: 100%;   
+    margin-top: 10px;  
+    border: 1px solid #000;
+    position: absolute;
+    left: 0;    
+    bottom: 0;
+}

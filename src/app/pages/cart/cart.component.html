@@ -1,0 +1,45 @@
+<section>
+  <div class="row">
+    <div class="col-12">
+      <div class="d-flex justify-content-center align-items-center bg-light">
+        <div class="card p-3" style="width: 1264px; min-height: 300px;">
+          
+          <div class="row">
+            <div class="col-6">
+              <h2>Your Cart</h2>
+            </div>
+            <div class="col-6">
+              <h2>Total Price: {{ calculateTotalPrice() }}</h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6">
+              <div class="cartItems">
+                <div class="cartItemCheckout" *ngFor="let item of cartItems">
+                  <div class="">{{ item.name }}</div>
+                  <div class="">Price: {{ item.price }}</div>
+                  <div class="">
+                    <button class="borderBackground" (click)="decrementQuantity(item)">-</button>
+                    <button class="borderBackground">{{ item.quantity }}</button>
+                    <button class="borderBackground" (click)="incrementQuantity(item)">+</button>
+                    <button type="button" class="btn text-danger"(click)="removeItem(item)">Remove</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6">
+              <button type="button" class="btn btn-primary mrarginRight" (click)="checkout()">Place Order</button>
+              <button type="button" class="btn btn-primary mrarginRight" (click)="cancel()">Cancel</button>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

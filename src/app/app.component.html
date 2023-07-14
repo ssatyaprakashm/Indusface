@@ -1,0 +1,21 @@
+<!-- Header Component -->
+<section class="topHeader">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-lg-6 col-sm-12">
+              <strong>OnlineShopKart</strong>
+          </div>
+          <div class="col-lg-6 col-sm-12 text-end">
+              <button [routerLink]="['cart']">Checkout</button>
+              
+
+          </div>
+      </div>
+  </div>
+</section>
+
+<section id="products" class="card-top accordianTab">
+    <div class="container d-flex">
+        <router-outlet></router-outlet>
+    </div>
+</section>

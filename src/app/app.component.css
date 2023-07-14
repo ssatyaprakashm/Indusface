@@ -1,0 +1,28 @@
+.topHeader{
+    width: 100vw;
+    padding: 20px 0px;
+    background: #4472c4;
+}
+.topHeader strong{
+    color: #fff;
+    font-size: 25px;
+    letter-spacing: 0.5px;
+}
+.topHeader button{
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    padding: 7px 35px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background: #ff7a00;
+}
+
+.card-top{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background: #fff;
+}

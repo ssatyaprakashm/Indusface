@@ -1,0 +1,56 @@
+<!-- home.component.html -->
+<section>
+  <div class="row">
+    <div class="col-12">
+      <div class="d-flex justify-content-center align-items-center bg-light">
+        <div class="card p-3" style="max-width: 100%; border: none;">
+          <div class="row">
+            <div class="col-12">
+              <nav>
+                <div class="nav mb-3" id="nav-tab" role="tablist">
+                  <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                    type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                    Books
+                  </button>
+                  <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                    type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
+                    Laptops
+                  </button>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <div class="tab-content p-3 border bg-light" id="nav-tabContent" style="width: 1264px; min-height: 300px;">
+                <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                  <div class="productList d-flex">
+
+                    <div class="col-3 product" *ngFor="let product of productList">
+                      <div>{{ product.name }}</div>
+                      <div>Price: {{ product.price }}</div>
+                      <button class="btn btn-primary" (click)="addToCart(product)">Add to Cart</button>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                  <div class="productList d-flex">
+
+                    <div class="col-3 product" *ngFor="let product of laptopList">
+                      <div>{{ product.name }}</div>
+                      <div>Price: {{ product.price }}</div>
+                      <button class="btn btn-primary" (click)="addToCart(product)">Add to Cart</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
